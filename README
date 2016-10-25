@@ -1,0 +1,4 @@
+If you're running this on Mac OS X you need to tell damnable thing
+that 127.0.1.1 also means the loopback:
+
+sudo ifconfig lo0 alias 127.0.1.1
