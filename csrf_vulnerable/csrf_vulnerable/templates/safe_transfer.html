@@ -7,8 +7,8 @@
   {% if amount and recipient %}
   <h2>Transfered ${{ amount }} to {{ recipient }}</h2>
   {% endif %}
-  <form name="transfer" action="/transfer/" method="POST">
-    <input name="amount" type="hidden" value="{{ csrftoken }}">
+  <form name="transfer" action="/safetransfer/" method="POST">
+    <input name="csrftoken" type="hidden" value="{{ csrftoken }}">
     <label>Amount: <input name="amount" type="number" min="1" step="any"></label>
     <label>Recipient: <input name="recipient" type="email"></label>
     <button type="submit">Transfer</button>
